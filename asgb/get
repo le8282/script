@@ -1,0 +1,6 @@
+ln -s ../../leap/com.pdb 
+ln -s ../../leap/pro.pdb
+ln -s ../../leap/lig.pdb
+ln -s ../../leap/ligand.frcmod
+ln -s ../../leap/ligand1.mol2
+ln -s ../../image.nc
