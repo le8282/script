@@ -1,0 +1,3 @@
+trajin ../md18.crd 0 100000 10
+rms first :1-376@CA
+matrix correl :1-376@CA name r1 out p-d.dat byres
