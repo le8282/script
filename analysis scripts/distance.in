@@ -1,0 +1,4 @@
+trajin ../md18.crd 0 100000 100
+
+distance test :204@CA    :1210@N31    out z2.dat    time 0.2
+

@@ -1,0 +1,24 @@
+trajin ../md18.crd 
+
+reference ../../com.pdb
+align reference
+#center :1-252 mass
+#image  center familiar
+
+
+#rms reference mass out protein_rms2.dat :1-252@CA,C,N time 0.1
+#rms reference mass out ligand_rms2.dat :253 time 0.1
+#rms reference mass out complex_rms2.dat :1-253 time 0.1
+
+#rms reference mass out water-ligand_rms.dat :224 time 0.1
+
+#atomicfluct out water-rmsf_allatom.dat :1-223@C,CA,N byatom 
+#atomicfluct out water-rmsf_allatom_CA.dat :1-223@CA byatom 
+#atomicfluct out water-rmsf_residue.dat :1-223@C,CA,N byres	 
+atomicfluct out water-rmsf_residue_CA.dat :1-376@CA byres 
+
+
+#atomicfluct out water-bfactor_allatom.dat :1-223@C,CA,N byatom bfactor
+#atomicfluct out water-bfactor_allatom_CA.dat :1-223@CA byatom bfactor
+#atomicfluct out water-bfactor_residue.dat :1-223@C,CA,N byres bfactor
+#atomicfluct out water-bfactor_residue_CA.dat :1-223@CA byres bfactor 

@@ -1,0 +1,43 @@
+trajin ../guiji/md1.crd 0 1000 5
+trajin ../guiji/md2.crd 0 1000 5
+trajin ../guiji/md3.crd 0 1000 5
+trajin ../guiji/md4.crd 0 1000 5
+trajin ../guiji/md5.crd 0 1000 5
+trajin ../guiji/md6.crd 0 1000 5
+trajin ../guiji/md7.crd 0 1000 5
+trajin ../guiji/md8.crd 0 1000 5
+trajin ../guiji/md9.crd 0 1000 5
+trajin ../guiji/md10.crd 0 1000 5 
+trajin ../guiji/md11.crd 0 100000 100
+trajin ../guiji/md12.crd 0 100000 100
+trajin ../guiji/md13.crd 0 100000 100
+trajin ../guiji/md14.crd 0 100000 100
+trajin ../guiji/md15.crd 0 100000 100
+trajin ../guiji/md16.crd 0 100000 100
+trajin ../guiji/md17.crd 0 100000 100
+trajin ../md18.crd 0 100000 100
+
+
+reference ../../com.pdb
+#rms first out rms.dat :1-374@CA,C,N time 4
+center :1-376 mass
+image  center familiar
+
+
+rms reference mass out protein_rms1.dat :1-376@C,CA,N time 0.1
+#rms reference mass out ligand_rms1.dat :373-374 time 0.1
+#rms reference mass out complex_rms1.dat :1-374 time 0.1
+#rms reference mass out water-ligand_rms.dat :224 time 4
+
+
+#atomicfluct out rmsf_allatom1.dat :1-306@C,CA,N byatom
+#atomicfluct out rmsf_allatom_CA1.dat :1-306@CA byatom
+#atomicfluct out rmsf_residue1.dat :1-306@C,CA,N byres
+#atomicfluct out rmsf_residue_CA1.dat :1-306@CA byres
+
+
+#atomicfluct out bfactor_allatom.dat1 :1-306@C,CA,N byatom bfactor
+#atomicfluct out bfactor_allatom_CA1.dat :1-306@CA byatom bfactor
+#atomicfluct out bfactor_residue.dat1 :1-306@C,CA,N byres bfactor
+#atomicfluct out bfactor_residue_CA1.dat :1-306@CA byres bfactor 
+

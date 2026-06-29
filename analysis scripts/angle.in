@@ -1,0 +1,24 @@
+#trajin ../md18.crd 0 100000 1000
+trajin ../guiji/md14.crd 0 100000 1000
+trajin ../guiji/md15.crd 0 100000 1000
+trajin ../guiji/md16.crd 0 100000 1000
+trajin ../guiji/md17.crd 0 100000 1000
+trajin ../md18.crd 0 100000 1000
+#trajin ../../com_new.pdb
+angle angle1  :21@N,CA,C,O  :3,191@N,CA,C,O  :209@N,CA,C,O  out angle9.dat
+#dihedral :38@C :39@CA :39@N :39@C out di39.dat
+#
+# 定义从残基50中心指向残基40中心的向量
+#vector vA  center :3,191   :21 
+# 定义从残基50中心指向残基60&65共同中心的向量
+#vector vB  center :3,191  :209  
+# 计算夹角
+#vectormath vec1 vA vec2 vB dotangle out angle9.dat name myAngle
+#
+# 1. 定义三个向量，分别指向三个残基/残基组的质心
+#vector v1 center :21               # 残基 21 的质心
+#vector v2 center :3,191            # 残基 3 和 191 的共同质心
+#vector v3 center :209              # 残基 209 的质心
+
+# 2. 计算三个质心之间的夹角（v2 为顶点）
+#vectormath vec1 v1 vec2 v2 vec3 v3 dotangle out angle.dat name myAngle
