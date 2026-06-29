@@ -1,0 +1,32 @@
+#!/bin/bash
+#source /opt/intel/bin/compilervars.sh intel64
+#source /public/software/env_scripts/intel_2015-env.sh
+#source /public/software/env_scripts/cuda-8.0-env.sh
+#source /public/software/env_scripts/openmpi-1.8.8-intel-env.sh
+#source /public/software/amber18/amber.sh
+export CUDA_VISIBLE_DEVICES="1"
+
+
+
+#mpirun -np 20 sander.MPI -O -i min1.in -p pep.top -c pep.crd  -o  min1.out -r min1.rst -ref pep.crd < /dev/null
+#pmemd.cuda -O -i min1.in -p pep.top -c pep.crd  -o  min1.out -r min1.rst -ref pep.crd < /dev/null
+#pmemd.cuda -O -i min2.in -p pep.top -c min1.rst -o  min2.out -r min2.rst  < /dev/null
+#pmemd.cuda -O -i md0.in  -p pep.top -c min2.rst -o  md0.out  -x md0.crd -r md0.rst -ref min2.rst < /dev/null
+#pmemd.cuda -O -i md1.in  -o md1.out -p pep.top  -c  md0.rst  -r md1.rst -x md1.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md2.out -p pep.top  -c  md1.rst  -r md2.rst -x md2.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md3.out -p pep.top  -c  md2.rst  -r md3.rst -x md3.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md4.out -p pep.top  -c  md3.rst  -r md4.rst -x md4.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md5.out -p pep.top  -c  md4.rst  -r md5.rst -x md5.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md6.out -p pep.top  -c  md5.rst  -r md6.rst -x md6.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md7.out -p pep.top  -c  md6.rst  -r md7.rst -x md7.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md8.out -p pep.top  -c  md7.rst  -r md8.rst -x md8.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md9.out -p pep.top  -c  md8.rst  -r md9.rst -x md9.crd  < /dev/null
+#pmemd.cuda -O -i md1.in  -o md10.out -p pep.top  -c  md9.rst  -r md10.rst -x md10.crd  < /dev/null
+#pmemd.cuda -O -i md4.in  -o md11.out -p pep.top  -c  md10.rst  -r md11.rst -x md11.crd  < /dev/null
+#pmemd.cuda -O -i md4.in  -o md12.out -p pep.top  -c  md11.rst  -r md12.rst -x md12.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md13.out -p pep.top  -c  md12.rst  -r md13.rst -x md13.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md14.out -p pep.top  -c  md13.rst  -r md14.rst -x md14.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md15.out -p pep.top  -c  md14.rst  -r md15.rst -x md15.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md16.out -p pep.top  -c  md15.rst  -r md16.rst -x md16.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md17.out -p pep.top  -c  md16.rst  -r md17.rst -x md17.crd  < /dev/null
+pmemd.cuda -O -i md4.in  -o md18.out -p pep.top  -c  md17.rst  -r md18.rst -x md18.crd  < /dev/null

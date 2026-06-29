@@ -1,0 +1,14 @@
+cat > frame_convert.in << EOF
+parm com.top
+
+# 每10帧转换1帧，控制文件大小
+trajin md18.crd 100000 100000 1 
+
+autoimage
+#trajout frame10last.pdb pdb multi
+trajout 9-18.pdb pdb
+
+run
+EOF
+
+cpptraj -i frame_convert.in

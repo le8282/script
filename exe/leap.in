@@ -1,0 +1,37 @@
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+source leaprc.gaff
+
+loadamberparams ligand.frcmod
+loadamberparams frcmod.ionslm_iod_opc
+
+p1 = loadpdb proteina_amber.pdb
+p2 = loadpdb proteinb_amber.pdb
+
+
+la = loadmol2 ligand1.mol2
+lb = loadmol2 ligand2.mol2
+ll= combine { la lb }
+pp= combine { p1 p2 }
+c = combine { pp ll } 
+
+
+savepdb pp pro.pdb
+savepdb ll lig.pdb
+savepdb c  com.pdb
+
+saveamberparm pp pro.top pro.crd
+saveamberparm ll lig.top lig.crd
+saveamberparm c com.top com.crd
+
+solvateoct c   OPCBOX 10.0
+
+charge c
+addions c Cl- 0
+addions c Na+ 0
+
+savepdb c pep.pdb
+saveamberparm c pep.top pep.crd
+
+quit
+#####
