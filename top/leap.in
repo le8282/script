@@ -1,0 +1,25 @@
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+
+
+p1 = loadpdb proteina.pdb
+p2 = loadpdb proteinb.pdb
+
+c = combine { p1 p2 } 
+
+
+savepdb c  com.pdb
+
+saveamberparm c com.top com.crd
+
+solvateoct c   OPCBOX 10.0
+
+charge c
+addions c Cl- 0
+addions c Na+ 0
+
+savepdb c pep.pdb
+saveamberparm c pep.top pep.crd
+
+quit
+#####
